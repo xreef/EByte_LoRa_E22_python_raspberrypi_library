@@ -94,7 +94,7 @@ class Logger:
         return Logger(self.enable_debug)
 
 
-logging = Logger(False)
+logging = Logger(True)
 
 logger = logging.getLogger(__name__)
 
@@ -505,21 +505,17 @@ class LoRaE22:
             self.set_mode(prev_mode)
             return code, None
 
-        code = self.set_mode(prev_mode)
-        if code != ResponseStatusCode.E22_SUCCESS:
-            return code, None
+        # data = self.uart.read_all()
+        # logger.debug("data: {}".format(data))
+        # logger.debug("data len: {}".format(len(data)))
 
-        data = self.uart.read()
-        logger.debug("data: {}".format(data))
-        logger.debug("data len: {}".format(len(data)))
+        # if data is None or len(data) != PacketLength.PL_CONFIGURATION+3:
+        #     code = ResponseStatusCode.ERR_E22_DATA_SIZE_NOT_MATCH
+        #     return code, None
 
-        if data is None or len(data) != PacketLength.PL_CONFIGURATION+3:
-            code = ResponseStatusCode.ERR_E22_DATA_SIZE_NOT_MATCH
-            return code, None
-
-        logger.debug("model: {}".format(self.model))
-        configuration = Configuration(self.model)
-        configuration.from_bytes(data)
+        # logger.debug("model: {}".format(self.model))
+        # configuration = Configuration(self.model)
+        # configuration.from_bytes(data)
 
         if ProgramCommand.WRONG_FORMAT == configuration._COMMAND:
             code = ResponseStatusCode.ERR_E22_WRONG_FORMAT
@@ -529,6 +525,10 @@ class LoRaE22:
             code = ResponseStatusCode.ERR_E22_HEAD_NOT_RECOGNIZED
 
         self.clean_UART_buffer()
+
+        code = self.set_mode(prev_mode)
+        if code != ResponseStatusCode.E22_SUCCESS:
+            return code, None
 
         return code, configuration
 
