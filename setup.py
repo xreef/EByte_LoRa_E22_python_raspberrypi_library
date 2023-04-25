@@ -3,7 +3,7 @@ sys.path.pop(0)
 from setuptools import setup
 
 setup(
-    name="raspberrypi-lora-e22",
+    name="ebyte-lora-e22-rpi",
     package_dir={'': 'src'},
     py_modules=["lora_e22", "lora_e22_constants", "lora_e22_operation_constant"],
     version="0.0.2",
