@@ -142,7 +142,7 @@ while True:
         print(ResponseStatusCode.get_description(code))
 
         print(value)
-        utime.sleep_ms(2000)
+        time.sleep(2)
 ```
 
 If you want receive RSSI also you must enable it in the configuration
@@ -183,7 +183,7 @@ while True:
         print(ResponseStatusCode.get_description(code))
         print(value)
         print(value['pippo'])
-        utime.sleep_ms(2000)
+        time.sleep(2)
 ```
 
 if you want receive RSSI also you must enable it in the configuration
