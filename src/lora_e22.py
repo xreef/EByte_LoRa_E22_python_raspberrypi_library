@@ -509,6 +509,8 @@ class LoRaE22:
         if code != ResponseStatusCode.E22_SUCCESS:
             return code, None
 
+        self.managed_delay(100)
+
         data = self.uart.read_all()
         logger.debug("data: {}".format(data))
         logger.debug("data len: {}".format(len(data)))
