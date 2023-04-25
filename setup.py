@@ -16,14 +16,14 @@ setup(
     maintainer="Renzo Mischianti",
     maintainer_email="renzo.mischianti@gmail.com",
     license="MIT",
-    install_requires=[],
+    install_requires=["RPi", "pyserial", "json", "time", "re"],
     project_urls={
         'Documentation': 'https://www.mischianti.org/category/my-libraries/ebyte-lora-e22-devices/',
         'Documentazione': 'https://www.mischianti.org/it/category/le-mie-librerie/dispositivi-ebyte-lora-e22/',
     },
     classifiers=[
         "Development Status :: 5 - Production/Stable",
-        "Programming Language :: Python :: Implementation :: RaspberryPi",
+        "Programming Language :: Python",
         "License :: OSI Approved :: MIT License",
     ],
 )

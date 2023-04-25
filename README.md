@@ -1,11 +1,11 @@
 <div>
 <a href="https://www.mischianti.org/forums/forum/mischiantis-libraries/ebyte-lora-e22-uart-devices-sx1262-sx1268//"><img
-  src="https://github.com/xreef/LoRa_E22_Series_Library/raw/master/resources/buttonSupportForumEnglish.png" alt="Support forum EByte e32 English"
+  src="https://github.com/xreef/LoRa_E32_Series_Library/raw/master/resources/buttonSupportForumEnglish.png" alt="Support forum EByte e32 English"
    align="right"></a>
 </div>
 <div>
 <a href="https://www.mischianti.org/it/forums/forum/le-librerie-di-mischianti/ebyte-e22-dispositivi-lora-uart-sx1262-sx1268/"><img
-  src="https://github.com/xreef/LoRa_E22_Series_Library/raw/master/resources/buttonSupportForumItaliano.png" alt="Forum supporto EByte e32 italiano"
+  src="https://github.com/xreef/LoRa_E32_Series_Library/raw/master/resources/buttonSupportForumItaliano.png" alt="Forum supporto EByte e32 italiano"
   align="right"></a>
 </div>
 
