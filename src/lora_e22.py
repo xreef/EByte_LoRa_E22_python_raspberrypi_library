@@ -509,7 +509,7 @@ class LoRaE22:
         if code != ResponseStatusCode.E22_SUCCESS:
             return code, None
 
-        data = self.uart.read()
+        data = self.uart.read_all()
         logger.debug("data: {}".format(data))
         logger.debug("data len: {}".format(len(data)))
 

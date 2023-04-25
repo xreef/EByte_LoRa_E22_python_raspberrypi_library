@@ -16,7 +16,7 @@
 #       It works with other boards, but you may need to change the UART pins.
 
 import serial
-import utime
+import time
 
 from lora_e22 import LoRaE22, Configuration
 from lora_e22_operation_constant import ResponseStatusCode
@@ -56,4 +56,4 @@ while True:
 
         print(value)
         print(value['key1'])
-        utime.sleep_ms(2000)
+        time.sleep(2)
