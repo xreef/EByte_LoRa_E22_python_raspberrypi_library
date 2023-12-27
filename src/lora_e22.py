@@ -2,7 +2,7 @@
 # EBYTE LoRa E22 Series for RaspberryPi
 #
 # AUTHOR:  Renzo Mischianti
-# VERSION: 0.0.1
+# VERSION: 0.0.4
 #
 # This library is based on the work of:
 # https://www.mischianti.org/category/my-libraries/lora-e22-devices/
@@ -653,7 +653,7 @@ class LoRaE22:
             data = self.uart.read(size)
         else:
             data = self.uart.read()
-            time.sleep(0.08)  # wait for the rest of the message
+            time.sleep(0.25)  # wait for the rest of the message
             while self.uart.in_waiting > 0:
                 data += self.uart.read()
 

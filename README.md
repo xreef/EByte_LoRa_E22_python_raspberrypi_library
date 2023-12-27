@@ -14,6 +14,7 @@
 
 
 ### Changelog
+ - 2023-05-02 0.0.4 Fix message size error
  - 2023-04-25 0.0.3 Minor fixes
  - 2023-03-21 0.0.1 Fully functional library
 

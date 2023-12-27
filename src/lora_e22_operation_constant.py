@@ -85,7 +85,7 @@ class ResponseStatusCode:
         elif status == ResponseStatusCode.ERR_E22_WRONG_UART_CONFIG:
             return "Wrong UART configuration! (BPS must be 9600 for configuration)"
         elif status == ResponseStatusCode.ERR_E22_PACKET_TOO_BIG:
-            return "The device support only 58byte of data transmission!"
+            return "The device support only 240byte of data transmission!"
         elif status == ResponseStatusCode.ERR_E22_JSON_PARSE:
             return "JSON parse error!"
         elif status == ResponseStatusCode.ERR_E22_DEINIT_UART_FAILED:
